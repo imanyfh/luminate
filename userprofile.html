@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User Profile
+{% endblock %}
+
+{% block main %}
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-icon">
+            <i class="fa fa-user" aria-hidden="true"></i>
+
+        </div>
+        <div>
+            {% for user in users %}
+            <a href="{{ url_for('userpost', user_id=user.id) }}" class="view-posts-button">View Posts</a>
+
+            {% endfor %}
+        </div>
+
+
+        {% for user in profile %}
+        <div class="profile-name-frame">
+            <h3>Username: </h3>
+            <h1>{{ user.username }}</h1>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="profile-details">
+        {% for user in profile %}
+        <div class="section">
+            <div class="bio-inner-inner-box">
+            <h2>About {{ user.username }}:</h2>
+            <div class="bio-outer-box">
+                <div class="bio-inner-box">
+                    <h4>{{ user.bio }}</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+        <div class="section">
+            <h2>Interests:</h2>
+            <ul class="interest-list">
+                <li>Sports</li>
+                <li>Travel</li>
+                <li>Photography</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

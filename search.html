@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+
+<h3>Search For Other Users <i class="fas fa-search"></i></h3>
+<form action="/result" method="post">
+    <div class="mb-3 search-container">
+        <input autocomplete="off" class="form-control mx-auto w-auto" name="search" id="search" autofocus placeholder="Search for other users" type="search">
+        <br>
+        <button class="btn btn-info" type="submit">Search</button>
+    </div>
+</form>
+
+{% endblock %}

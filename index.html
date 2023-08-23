@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <div id="welcome-message" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+        Hello, <span id="username-placeholder"></span>!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="image">
+        <img src="static/L.png" alt="image">
+
+    </div>
+</div>
+
+    <script>
+        // Function to show the welcome message
+        function showWelcomeMessage(username) {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const usernamePlaceholder = document.getElementById('username-placeholder');
+
+            usernamePlaceholder.textContent = username;
+            welcomeMessage.style.display = 'block';
+        }
+
+        // Call this function when user logs in or registers
+        {% if session["user_id"] %}
+            showWelcomeMessage('{{ username }}');
+        {% endif %}
+    </script>
+{% endblock %}

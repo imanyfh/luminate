@@ -1,0 +1,13 @@
+#What will your software do? What features will it have? How will it be executed?
+
+	"It will be a social network which people can share thoughts, communicate and many more. You can post something and the people who follow you can see it.
+It will work by python, Flask and SQL."
+
+#What new skills will you need to acquire? What topics will you need to research?
+	"-Learn more about web development. And understand how to implement the follow function."
+
+
+#In the world of software, most everything takes longer to implement than you expect.
+#And so it’s not uncommon to accomplish less in a fixed amount of time than you hope.
+#What might you consider to be a good outcome for your project? A better outcome? The best outcome?
+	"A better outcome."

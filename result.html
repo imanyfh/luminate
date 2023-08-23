@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block main %}
+
+<h3>Search For Other Users <i class="fas fa-search"></i></h3>
+<form action="/result" method="post">
+    <div class="mb-3">
+
+        <input autocomplete="off" class="form-control mx-auto w-auto" name="search" id="search" autofocus placeholder="Search for other users" type="search">
+        <br>
+        <button class="btn btn-info" type="submit">Search</button>
+    </div>
+</form>
+
+    <div class="search-results" id="search-results">
+        <h2>Search Results</h2>
+        {% if users %}
+            <ul class="user-list">
+                {% for user in users %}
+                    <li class="user-item">
+                        <span class="username">{{ user.username }}</span>
+                        <a href="{{ url_for('userprofile', user_id=user.id) }}" class="view-posts-button">View User Profile</a>
+                        <button type="button" class="send-button">
+                              <i class="fas fa-user" aria-hidden="true"></i>
+                            </button>
+                          </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>(Not found)</p>
+        {% endif %}
+
+    </div>
+
+    <br>
+    <footer class="mb-5 small text-center text-muted">
+        You can view a users profile by clicking the <a class="green">Green Profile Button</a>.
+    </footer>
+{% endblock %}

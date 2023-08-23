@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block main %}
+
+<div class="box-container">
+    <form action="/register" method="post" >
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email address" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password" required>
+            <small id="passwordStrength" class="form-text"></small>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password" required>
+        </div>
+
+
+        <div class="container d-flex justify-content-center">
+        <div >
+            <label for="dob-day">Date of Birth:</label>
+            <div class="row gx-1 align-items-center">
+                <select name="dob-day" class="form-control  w-auto" required>
+                    <option value="" disabled selected>Day</option>
+                    {% for day in range(1, 32) %}
+                        <option value="{{ day }}">{{ day }}</option>
+                    {% endfor %}
+                </select>
+                <select name="dob-month" class="form-control  w-auto" required>
+                    <option value="" disabled selected>Month</option>
+                    {% for month in ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %}
+                        <option value="{{ loop.index }}">{{ month }}</option>
+                    {% endfor %}
+                </select>
+                <select name="dob-year" class="form-control w-auto" required>
+                    <option value="" disabled selected>Year</option>
+                    {% for year in range(current_year, current_year - 100, -1) %}
+                        <option value="{{ year }}">{{ year }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container d-flex justify-content-center">
+    <div class="col-auto">
+        <div class="form-check d-flex align-items-center">
+            <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+            <label class="form-check-label" for="autoSizingCheck2">
+                Remember me
+            </label>
+        </div>
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+    </div>
+</div>
+
+    </form>
+
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const passwordStrengthText = document.getElementById('passwordStrength');
+
+        passwordInput.addEventListener('input', function() {
+            const password = passwordInput.value;
+
+            // Call a function to check password strength
+            const strength = checkPasswordStrength(password);
+
+            // Update password strength indicator and color
+            if (password.length === 0) {
+                passwordStrengthText.innerHTML = '';
+            } else {
+                passwordStrengthText.innerHTML = `Password Strength: ${strength}`;
+                passwordStrengthText.style.color = getPasswordStrengthColor(strength);
+            }
+        });
+
+        function checkPasswordStrength(password) {
+            // Logic to determine password strength (you can customize this part)
+            if (password.length < 6) {
+                return 'Weak &#10060;'; // Cross icon
+            } else if (password.length >= 6 && password.length < 10) {
+                return 'Moderate';
+            } else {
+                return 'Strong &#10004;'; // Checkmark icon
+            }
+        }
+
+        function getPasswordStrengthColor(strength) {
+            switch (strength) {
+                case 'Weak &#10060;':
+                    return 'red';
+                case 'Moderate':
+                    return 'orange'; // Use a more visually appealing color
+                case 'Strong &#10004;':
+                    return 'green';
+                default:
+                    return 'black';
+            }
+        }
+    </script>
+
+
+    <br>
+<div>
+    <footer class="mb-5 small text-center text-muted">
+        By signing up, you agree to our Terms, <a href="#">Privacy Policy</a>
+        <footer>and <a href="#">Cookie services</a> on Luminate. <a href="#">Learn more.</a></footer>
+    </footer>
+</div>
+</div>
+
+{% endblock %}

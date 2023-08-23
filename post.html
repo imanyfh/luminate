@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Post
+{% endblock %}
+
+{% block main %}
+
+      posting as: <h1 class="username"> {{ username }}</h1>
+      <form action="/post" method="post">
+      <div class="mb-3">
+        <label >Select a post method:</label>
+        <select>
+            <option value="country" disabled selected>Method</option>
+            {% for country in [
+              "Private", "Public", "Link-only"
+            ] %}
+              <option value="{{ loop.index }}">{{ country }}</option>
+            {% endfor %}
+          </select>
+
+        </div>
+    </div>
+    <div class="profile-details">
+        <div class="section">
+          <h2>Post content</h2>
+          <div class="mb-3">
+
+            <label for="post">Write the contents of your post:</label>
+            <textarea name="post" id="post" class="styled-textarea"></textarea>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Post</button><h2><i class="fa fa-upload" aria-hidden="true"></i></h2>
+
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+{% endblock %}

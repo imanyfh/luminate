@@ -1,0 +1,469 @@
+/* Reset default margin and padding */
+
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333; /* Set default text color */
+}
+
+.center-horizontal {
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #343a40;
+}
+.navbar-brand {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.navbar-brand .circle {
+  width: 40px;
+  height: 40px;
+  background-color: #17a2b8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1px;
+}
+.navbar-brand .circle span {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar-nav .nav-link {
+  color: #000000;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover {
+  color: #17a2b8;
+}
+.navbar-toggler-icon {
+  background-color: #ffffff;
+}
+
+/* Apology and Center Content */
+.error-container,
+.center-content {
+  text-align: center;
+}
+.error-icon {
+  font-size: 100px;
+  color: #dc3545;
+}
+.error-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.error-message {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+.back-button {
+  margin-top: 20px;
+}
+.back-button a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #17a2b8;
+  transition: color 0.3s ease-in-out;
+}
+.back-button a:hover {
+  color: #0056b3;
+}
+
+/* Form Styling */
+.form-check,
+.form-select,
+.dob-select {
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+/* Box Container */
+.box-container,
+.search-results {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f4f8f8;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Search Results Styling */
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results ul li {
+  margin-bottom: 6px;
+  padding: 6px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  font-size: 14px;
+}
+
+
+
+
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.username {
+  font-family: 'Squada one', sans-serif;
+  font-size: 18px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.send-button {
+  width: 30px;
+  height: 30px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url("path-to-your-send-icon.png");
+  background-size: cover;
+}
+
+.green {
+  color: #3FA427;
+}
+
+
+
+
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden; /* Hide any content outside the circle */
+}
+
+
+.username {
+  font-size: 28px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.location {
+  color: #888;
+}
+
+.profile-details h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.interest-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.interest-list li {
+  background-color: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Add more styling as needed to enhance the look */
+
+
+.styled-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.styled-textarea:focus {
+  outline: none;
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a soft shadow on focus */
+}
+
+
+
+
+.black {
+  color: #000000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.username {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-details {
+  margin-top: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+
+
+.interest-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  padding:0  40px;
+
+}
+
+.interest-list li {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/* Additional styling for the profile page */
+.profile-icon {
+  font-size: 48px;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-name-frame {
+  border: 2px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.profile-name-frame h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.bio-outer-box {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.bio-inner-box {
+  background-color: #fff;
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.bio-inner-inner-box {
+  background-color: #F5F5F5;
+  border: 2px solid #F5F5F5;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Rest of your existing CSS styles... */
+
+
+
+
+.image {
+  background-image: url("travel-pic.jpg");
+  background-size: cover; /* Adjust this property based on your design preference */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 100%; /* Limit the width to the container's width */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.image img {
+  width: 100%; /* Make the image fill the available width */
+  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}
+
+
+
+
+
+/* Post Section */
+.post-section {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Post Box */
+.post-box {
+  background-color: #f4f8f8;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* Post Content */
+.post-content {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Post Meta */
+.post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Post Date */
+.post-date {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Post Like Button */
+.post-like-button,
+.post-comment-button {
+  border: none;
+  background-color: transparent;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.post-like-button i,
+.post-comment-button i {
+  margin-right: 5px;
+}
+
+/* Style the red heart icon */
+.post-like-button i.fa-heart {
+  color: red;
+}
+
+/* Hover effect to change heart color on hover */
+.post-like-button:hover i.fa-heart {
+  color: darkred;
+}
+
+
+.view-posts-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.view-posts-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.nav-item a {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  font-family: 'Squada one' -
+}
+
+.nav-item a:hover {
+  color: #007bff;
+}

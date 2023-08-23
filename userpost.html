@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User Posts
+{% endblock %}
+
+{% block main %}
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-icon">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="profile-name-frame">
+            {% for user in users %}
+            <h3 class="profile-username">Username:</h3>
+            <h1 class="profile-name">{{ user.username }}</h1>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="profile-details">
+        {% for post in posts %}
+        <div class="section post-section">
+            <div class="bio-inner-inner-box post-box">
+                <div class="bio-outer-box">
+                    <div class="bio-inner-box">
+                        <p class="post-content">{{ post.post }}</p>
+                    </div>
+                </div>
+                <div class="post-meta">
+                    <span class="post-date">Posted on {{ current_date }}</span>
+                    <button class="post-like-button">
+                        <i class="fa fa-heart" aria-hidden="true"></i> Like
+                    </button>
+                    <button class="post-comment-button">
+                        <i class="fa fa-comment" aria-hidden="true"></i> Comment
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

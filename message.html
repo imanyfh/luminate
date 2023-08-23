@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Social Network</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+        #messages {
+            list-style: none;
+            padding: 0;
+        }
+        #messages li {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Simple Social Network</h1>
+        <form action="/send" method="post">
+            <label for="user">User: </label>
+            <input type="text" id="user" name="user" required><br>
+            <label for="message">Message: </label>
+            <input type="text" id="message" name="message" required><br>
+            <button type="submit">Send</button>
+        </form>
+        <h2>Messages</h2>
+        <ul id="messages">
+            {% for message in messages %}
+            <li><strong>{{ message.user }}:</strong> {{ message.message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
